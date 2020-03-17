@@ -31,6 +31,27 @@ namespace Lab1
         }
 
     }
+    
+    class Bank{
+        List<BankAccount> Accounts;
+        
+        public Bank(){
+            Accounts = new List<BankAccount>();
+        }
+        
+        public void Create(int accId, decimal balance){
+        
+        }
+        
+        public void Deposit(int accId, decimal amount){
+        
+        }
+        
+        public void Withdraw(int accId, decimal amount){
+        
+        }
+    }
+    
     class Program
     {
         static void Main(string[] args)
@@ -43,9 +64,13 @@ namespace Lab1
 
             string command;
 
+            Bank myBank = new Bank();
+            myBank.Create();
+            
             switch (command)
             {
                 case ("Create"):
+                    myBank.Create();
                     Console.WriteLine("Account already exists");
                     break;
                 case ("Deposit "):
@@ -59,11 +84,9 @@ namespace Lab1
                 case ("End"):
                     break;
 
-
             }
-
-
-
+            
+           
             Console.WriteLine(acc);
 
             Console.ReadLine();
